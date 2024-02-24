@@ -49,7 +49,7 @@ public class ProdutoController {
     return new ResponseEntity<>(produtoAtualizado, HttpStatus.OK);
   }
 
-  @DeleteMapping
+  @DeleteMapping("/{id}")
   public ResponseEntity<Void> excluirProduto(@PathVariable UUID id) {
     produtoService.excluirProduto(id);
     return new ResponseEntity<>(HttpStatus.NO_CONTENT);
